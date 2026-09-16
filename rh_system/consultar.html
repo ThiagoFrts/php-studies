@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de RH</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <div id="pai">
+        <h1>Sistema de RH</h1>
+        <h2>Escolha um cargo para exibir os funcionários</h2>
+    </div>
+    <br>
+    <div class="box">
+        <a href="index.html" id="btn">Voltar</button></a>
+    </div>
+
+    <br>
+    <form action="consultar.php" method="post">
+        <div class="borda">
+            <div class="campo">
+
+
+                <label for="">Cargo:</label>
+                <select name="cargo_id" id="">
+                    <option selected disabled value="">Selecione seu cargo</option>
+                    <option value="1">Gestor de projetos</option>
+                    <option value="2">QA</option>
+                    <option value="3">Engenheiro Software</option>
+                    <option value="4">Desenvolvedor Backend</option>
+                    <option value="5">Desenvolvedor Frontend</option>
+                    <option value="6">Desenvolvedor Full Stack</option>
+                    <option value="7">Analista de dados</option>
+                </select>
+                <input type="submit" value="Consultar">
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

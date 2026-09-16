@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de RH</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <div id="pai">
+        <h1>Sistema de RH</h1>
+        <h2>Digite seus dados para se cadastrar na empresa</h2>
+    </div>
+    <br>
+    <div class="box">
+        <a href="consultar.html">Consultar</a>
+    </div>
+
+    <br>
+    <form action="cadastro.php" method="post">
+        <div class="borda">
+            <div class="campo">
+                <label for="">Nome:</label>
+                <input type="text" placeholder="Digite seu nome" required maxlength="30" name="nome">
+
+                <label for="">Cargo:</label>
+                <select name="cargo_id" id="">
+                    <option selected disabled value="">Selecione seu cargo</option>
+                    <option value="1">Gestor de projetos</option>
+                    <option value="2">QA</option>
+                    <option value="3">Engenheiro Software</option>
+                    <option value="4">Desenvolvedor Backend</option>
+                    <option value="5">Desenvolvedor Frontend</option>
+                    <option value="6">Desenvolvedor Full Stack</option>
+                    <option value="7">Analista de dados</option>
+                </select>
+
+                <label for="">Nascimento:</label>
+                <input type="date" maxlength="15" placeholder="Digite sua data de nascimento" required
+                    name="nascimento">
+
+                <label for="">Telefone:</label>
+                <input type="tel" placeholder="Digite seu telefone" required name="telefone">
+
+                <label for="">Endereço:</label>
+                <input type="text" placeholder="Digite seu endereco" required maxlength="40" name="endereco">
+                <input type="submit" value="Cadastrar">
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
