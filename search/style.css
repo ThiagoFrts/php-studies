@@ -1,0 +1,86 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  color: #dde1e6;
+  font-size: 32px;
+  padding: 25px 15px;
+  background-color: #0a314b;
+  width: 100%;
+  box-shadow: 0px 0px 10px rgb(92, 89, 89);
+}
+
+.centro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 120px);
+  padding: 20px;
+}
+
+.borda {
+  border-radius: 16px;
+  width: 100%;
+  max-width: 380px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #2c3e50;
+}
+
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #333;
+  background-color: #fff;
+  outline: none;
+  transition: border-color 0.2s ease;
+  cursor: pointer;
+}
+
+select:focus {
+  border-color: #3498db;
+}
+
+input[type="submit"] {
+  margin-top: 20px;
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #1976b4;
+}
