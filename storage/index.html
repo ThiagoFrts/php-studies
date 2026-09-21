@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Bem vindo a Tela de cadastro</h1>
+        <h2>Cadastrar fornecedor digite seus dados</h2>
+
+    </header>
+
+
+    <main>
+        <nav>
+            <a href="/assets/html/cadastroP.html">Cadastrar produto</a>
+            <a href="/assets/html/consultaP.html">Consultar produto</a>
+            <a href="/assets/html/AtualizarP.html">Atualizar produto</a>
+        </nav>
+
+        <form action="cadastro.php" method="post">
+            <div class="quadro">
+                Olá fornecedor
+                <label for="">Nome</label>
+                <input type="text" name="nome" placeholder="Digite seu nome">
+
+                <label for="Telefone">Telefone</label>
+                <input type="tel" name="telefone" placeholder="Digite seu telefone" maxlength="12" max="12">
+
+                <label for=""> Endereço</label>
+                <input type="text" name="endereco" id="" placeholder="Digite seu endereço">
+
+                <label for="">Cnpj</label>
+                <input type="text" name="cnpj" placeholder="Digite seu CNPJ">
+                <br>
+                <button type="submit" value="cadastrar">Cadastrar</button>
+
+            </div>
+        </form>
+
+    </main>
+</body>
+
+</html>
