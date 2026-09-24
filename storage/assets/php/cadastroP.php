@@ -26,20 +26,28 @@
             <input type="text" name="preco" required placeholder="Informe o preço por produto">
 
             <label for="">Fornecedor</label>
-            <select name="fornecedor" id="" ; required>
+            <select name="id_fornecedor" id="" required>
                 <option selected disabled value="">Selecione um fornecedor</option>
-                <option value="">
-                    <?php
-                    
 
+                <?php
+                include_once('conexao.php');
 
+                $consultaFornecedor = mysqli_query(
+                    $conexao,
+                    "SELECT id_fornecedor, nome 
+                         FROM fornecedor "
+                );
 
-                    ?>
-                </option>
+                while ($linha = mysqli_fetch_array($consultaFornecedor)) {
+                    echo "<option value='" . $linha['id_fornecedor'] . "'>" . $linha['nome'] . "</option>";
+                }
+                ?>
+
             </select>
 
             <button type="submit">Cadastrar</button>
         </form>
+
     </div>
     <a href="../../index.html"> <button>Voltar para a aba inicial</button></a>
 </body>
