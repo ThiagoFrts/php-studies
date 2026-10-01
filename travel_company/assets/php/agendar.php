@@ -17,7 +17,7 @@
         <form action="salvar.php" method="post">
             <label>Cliente:</label>
             <select name="id_cliente" required>
-                <option selected disabled value="">Selecione seu nome</option>
+                <option selected disabled value="">Selecione seu nome...</option>
                 <?php
 
                 include_once('conexao.php');
@@ -42,14 +42,14 @@
             <input type="time" placeholder="Horário da Viagem" name="horario">
 
             <label for="">Origem: </label>
-            <input type="text" placeholder="Digite sua cidade" name="origem">
+            <input type="text" placeholder="Ex: São Paulo, SP" name="origem">
 
             <label for="">Destino: </label>
-            <input type="text" placeholder="Digite o local desejado" name="destino">
+            <input type="text" placeholder="Ex: Rio de Janeiro, RJ" name="destino">
 
             <label for="">Empresa: </label>
             <select name="id_empresa" id="">
-                <option selected disabled value="">Escolha um empresa</option>
+                <option selected disabled value="">Selecione a empresa de ônibus...</option>
                 <option value="1">Tech Solutions</option>
                 <option value="2">Inovação Digital</option>
                 <option value="3">Global Logistics</option>
