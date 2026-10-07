@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Turma</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+
+<body>
+    <header>
+        <h1>Preencha o formulário abaixo para realizar o cadastro da turma</h1>
+    </header>
+
+    <main>
+        <section>
+            <div class="quadro">
+                <h3>Nova Turma</h3>
+                <form action="../php/cad.php" method="post">
+                    <label for="curso">Curso</label><br>
+                    <select name="curso" id="">
+                        <option selected disabled value="">Selecione um curso</option>
+                        <option value="Ciência da Computação">Ciência da Computação</option>
+                        <option value="Sistemas de Informação">Sistemas de Informação</option>
+                        <option value="Engenharia de Software">Engenharia de Software</option>
+                        <option value="Análise e Desenvolvimento de Sistemas">Análise e Desenvolvimento de Sistemas
+                        </option>
+                        <option value="Engenharia da Computação">Engenharia da Computação</option>
+                        <option value="Segurança da Informação">Segurança da Informação</option>
+                        <option value="Redes de Computadores">Redes de Computadores</option>
+                    </select>
+                    <br><br>
+                    <label for="turno">Turno:</label><br>
+                    <select name="turno" id="">
+                        <option value="" selected disabled>Selecione o turno</option>
+                        <option value="Manhã">Manhã</option>
+                        <option value="Tarde">Tarde</option>
+                        <option value="Noite">Noite</option>
+                    </select>
+                    <br><br>
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
