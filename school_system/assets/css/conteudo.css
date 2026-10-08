@@ -1,0 +1,234 @@
+/* =========================================================
+   conteudo.css
+   Estilo SOMENTE das páginas de conteúdo novas: cadastro de
+   turma, cadastro e consulta de aluno e as mensagens de
+   resultado. O estilo.css original não foi alterado.
+   Tudo aqui é limitado à classe .pg-conteudo.
+   ========================================================= */
+
+.pg-conteudo {
+    --azul: #3399cc;
+    --azul-aco: #4682b4;
+    --azul-escuro: #2a7fae;
+    --azul-claro: #eaf4fa;
+    --texto: #333333;
+    --texto-suave: #666666;
+    --borda: #c9d6df;
+    --erro: #cc0000;
+    --sucesso: #1e8449;
+
+    margin: 0;
+    padding: 24px 28px;
+    font-family: verdana, sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--texto);
+    background: transparent;
+}
+
+.pg-conteudo *,
+.pg-conteudo *::before,
+.pg-conteudo *::after {
+    box-sizing: border-box;
+}
+
+/* ---------- Títulos ---------- */
+.pg-conteudo header {
+    margin-bottom: 18px;
+}
+
+.pg-conteudo header h1,
+.pg-conteudo h2 {
+    margin: 0 0 6px;
+    font-size: 1.25rem;
+    color: var(--azul-aco);
+}
+
+.pg-conteudo h4 {
+    margin: 0 0 18px;
+    font-weight: 400;
+    color: var(--texto-suave);
+}
+
+/* ---------- Cartão do formulário ---------- */
+.pg-conteudo .quadro {
+    max-width: 560px;
+    padding: 24px 26px;
+    background: #ffffff;
+    border: 2px solid var(--azul);
+    border-radius: 8px;
+}
+
+.pg-conteudo .quadro h3 {
+    margin: 0 0 20px;
+    padding-bottom: 12px;
+    font-size: 1.05rem;
+    color: var(--azul-aco);
+    border-bottom: 2px solid var(--azul-claro);
+}
+
+.pg-conteudo .campo {
+    margin-bottom: 18px;
+}
+
+/* ---------- Campos e botões ---------- */
+.pg-conteudo label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: var(--azul-aco);
+}
+
+.pg-conteudo input[type="text"],
+.pg-conteudo input[type="email"],
+.pg-conteudo input[type="date"],
+.pg-conteudo select {
+    width: 100%;
+    padding: 10px 12px;
+    font: inherit;
+    color: var(--texto);
+    background: #ffffff;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+}
+
+.pg-conteudo input:focus,
+.pg-conteudo select:focus {
+    outline: none;
+    border-color: var(--azul);
+    box-shadow: 0 0 0 3px rgba(51, 153, 204, 0.2);
+}
+
+.pg-conteudo button {
+    padding: 10px 22px;
+    font: inherit;
+    font-weight: bold;
+    color: #ffffff;
+    background: var(--azul);
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.pg-conteudo button:hover {
+    background: var(--azul-escuro);
+}
+
+.pg-conteudo button:focus-visible,
+.pg-conteudo a:focus-visible {
+    outline: 3px solid rgba(51, 153, 204, 0.45);
+    outline-offset: 2px;
+}
+
+/* ---------- Consulta de alunos ---------- */
+.pg-conteudo .busca {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    max-width: 560px;
+}
+
+.pg-conteudo .busca label {
+    margin: 0;
+}
+
+.pg-conteudo .busca select {
+    flex: 1 1 220px;
+    width: auto;
+}
+
+.pg-conteudo .resumo {
+    margin: 22px 0 8px;
+    color: var(--texto-suave);
+}
+
+.pg-conteudo .resumo strong {
+    color: var(--azul-aco);
+}
+
+.pg-conteudo .sem-resultado {
+    margin-top: 22px;
+    padding: 14px 16px;
+    color: var(--texto-suave);
+    background: #ffffff;
+    border: 1px dashed var(--borda);
+    border-radius: 8px;
+}
+
+.pg-conteudo .tabela-wrap {
+    overflow-x: auto;
+    background: #ffffff;
+    border: 2px solid var(--azul);
+    border-radius: 8px;
+}
+
+.pg-conteudo .tabela {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pg-conteudo .tabela th {
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--azul-aco);
+    background: var(--azul-claro);
+}
+
+.pg-conteudo .tabela td {
+    padding: 10px 14px;
+    border-top: 1px solid var(--azul-claro);
+}
+
+.pg-conteudo .tabela tbody tr:hover td {
+    background: #f8fbfd;
+}
+
+/* ---------- Mensagens de resultado (cad.php / cadAluno.php) ---------- */
+.pg-conteudo .alerta-ok,
+.pg-conteudo .alerta-erro {
+    margin: 0;
+    padding: 12px 14px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.pg-conteudo .alerta-ok {
+    color: var(--sucesso);
+    background: #eaf7ef;
+    border: 1px solid #bfe3cc;
+}
+
+.pg-conteudo .alerta-erro {
+    color: var(--erro);
+    background: #fdf3f2;
+    border: 1px solid #f0cfcb;
+}
+
+.pg-conteudo .btn-voltar {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 9px 18px;
+    font-weight: bold;
+    color: var(--azul-aco);
+    text-decoration: none;
+    border: 1px solid var(--azul);
+    border-radius: 8px;
+}
+
+.pg-conteudo .btn-voltar:hover {
+    background: var(--azul-claro);
+}
+
+@media (max-width: 600px) {
+    .pg-conteudo {
+        padding: 16px;
+    }
+
+    .pg-conteudo .quadro {
+        padding: 18px;
+    }
+}

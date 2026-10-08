@@ -1,0 +1,393 @@
+.corpo {
+  background-color: #ffffff;
+}
+
+.pg-index #fundo {
+  position: absolute;
+  left: 3%;
+  top: 1%;
+  width: 94%;
+  height: 98%;
+  z-index: 1;
+}
+.pg-index #title {
+  position: absolute;
+  top: 2%;
+  width: 98%;
+  height: 18%;
+  z-index: 1;
+  left: 1%;
+  background-color: #3399cc;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pg-index #janela {
+  position: absolute;
+  left: 1%;
+  top: 21%;
+  width: 98%;
+  height: 79%;
+  z-index: 2;
+}
+.pg-index h2 {
+  font-size: 4.6em;
+  font-family: verdana;
+  color: white;
+  text-shadow: 2px 2px #4682b4;
+}
+
+.pg-login #fundo1 {
+  position: absolute;
+  left: 2%;
+  top: 2%;
+  width: 96%;
+  height: 96%;
+  z-index: 1;
+}
+.pg-login #formulario {
+  position: absolute;
+  left: 15%;
+  top: 50%;
+  width: 70%;
+  height: 25%;
+  z-index: 1;
+  vertical-align: middle;
+}
+
+.pg-aviso #principal {
+  position: absolute;
+  width: 98%;
+  height: 98%;
+  z-index: 1;
+  left: 1%;
+  top: 1%;
+}
+.pg-aviso #conteudo {
+  position: absolute;
+  left: 1%;
+  width: 98%;
+  height: 10%;
+  z-index: 1;
+  top: 45%;
+}
+.pg-aviso .msg {
+  font-family: verdana;
+  font-size: 1em;
+  color: #cc0000;
+}
+
+.pg-logado #fundo {
+  position: absolute;
+  width: 100%;
+  height: 98%;
+  z-index: 1;
+  background-color: #d8d8d8;
+  top: 1%;
+  border-radius: 17px;
+}
+.pg-logado #title {
+  position: absolute;
+  left: 99%;
+  width: 0%;
+  height: 0%;
+  z-index: 0;
+  background-color: #cccccc;
+  top: 99%;
+}
+.pg-logado #menu {
+  position: absolute;
+  left: 1%;
+  top: 2%;
+  width: 20%;
+  height: 96%;
+  z-index: 1;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 0;
+  border-radius: 8px;
+  border: 2px solid #3399cc;
+}
+.pg-logado #conteudo {
+  position: absolute;
+  left: 22%;
+  top: 11%;
+  width: 77%;
+  height: 88%;
+  z-index: 3;
+}
+.pg-logado #sair {
+  position: absolute;
+  left: 95%;
+  top: 1%;
+  width: 4%;
+  height: 10%;
+  z-index: 4;
+}
+.pg-logado #consulta_aluno {
+  position: absolute;
+  left: 2%;
+  top: 1%;
+  width: 8%;
+  height: 10%;
+  z-index: 5;
+}
+.pg-logado li {
+  list-style-type: none;
+  padding: 20px 7px;
+}
+.pg-logado a:link {
+  font-size: 1.1em;
+  font-family: verdana;
+  text-decoration: none;
+  color: #4682b4;
+}
+.pg-logado a:hover {
+  font-size: 1.1em;
+  font-family: verdana;
+  text-decoration: none;
+  color: #ff0000;
+}
+
+/* =========================================================
+   NOVO - páginas de conteúdo (cadastros, consulta e mensagens)
+   Tudo escopado em .pg-conteudo: não altera as telas antigas
+   (index, login, aviso e painel logado).
+   ========================================================= */
+.pg-conteudo,
+.pg-conteudo * {
+  box-sizing: border-box;
+}
+
+.pg-conteudo {
+  --azul: #3399cc;
+  --azul-escuro: #2a7fae;
+  --azul-profundo: #1f5f85;
+  --azul-claro: #eaf4fa;
+  --texto: #1e293b;
+  --texto-suave: #475569;
+  --borda: #dbe3ea;
+  --erro: #c0392b;
+  --sucesso: #1e8449;
+  --sombra: 0 4px 14px rgba(15, 60, 90, 0.08);
+
+  margin: 0;
+  padding: 28px 32px;
+  font-family: verdana, "Segoe UI", system-ui, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--texto);
+  background: transparent;
+}
+
+/* Formulários */
+.pg-conteudo label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--texto);
+}
+
+.pg-conteudo input[type="text"],
+.pg-conteudo input[type="email"],
+.pg-conteudo input[type="date"],
+.pg-conteudo select {
+  width: 100%;
+  padding: 10px 12px;
+  font: inherit;
+  color: var(--texto);
+  background: #ffffff;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.pg-conteudo input:focus,
+.pg-conteudo select:focus {
+  outline: none;
+  border-color: var(--azul);
+  box-shadow: 0 0 0 3px rgba(51, 153, 204, 0.2);
+}
+
+.pg-conteudo button {
+  padding: 11px 22px;
+  font: inherit;
+  font-weight: 600;
+  color: #ffffff;
+  background: var(--azul);
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.05s;
+}
+
+.pg-conteudo button:hover {
+  background: var(--azul-escuro);
+}
+
+.pg-conteudo button:active {
+  transform: translateY(1px);
+}
+
+.pg-conteudo button:focus-visible,
+.pg-conteudo a:focus-visible {
+  outline: 3px solid rgba(51, 153, 204, 0.45);
+  outline-offset: 2px;
+}
+
+.pg-conteudo .campo {
+  margin-bottom: 18px;
+}
+
+/* Títulos */
+.pg-conteudo header {
+  margin-bottom: 20px;
+}
+
+.pg-conteudo header h1,
+.pg-conteudo h2 {
+  margin: 0 0 6px;
+  font-size: 1.2rem;
+  color: var(--azul-profundo);
+}
+
+.pg-conteudo h4 {
+  margin: 0 0 20px;
+  font-weight: 400;
+  color: var(--texto-suave);
+}
+
+/* Cartão do formulário */
+.pg-conteudo .quadro {
+  max-width: 560px;
+  padding: 24px 26px;
+  background: #ffffff;
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  box-shadow: var(--sombra);
+}
+
+.pg-conteudo .quadro h3 {
+  margin: 0 0 20px;
+  padding-bottom: 12px;
+  font-size: 1.05rem;
+  color: var(--texto);
+  border-bottom: 2px solid var(--azul-claro);
+}
+
+.pg-conteudo .quadro button[type="submit"] {
+  margin-top: 4px;
+}
+
+/* Consulta de alunos */
+.pg-conteudo .busca {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  max-width: 560px;
+}
+
+.pg-conteudo .busca label {
+  margin: 0;
+}
+
+.pg-conteudo .busca select {
+  flex: 1 1 220px;
+  width: auto;
+}
+
+.pg-conteudo .resumo {
+  margin: 24px 0 8px;
+  color: var(--texto-suave);
+}
+
+.pg-conteudo .resumo strong {
+  color: var(--azul-profundo);
+}
+
+.pg-conteudo .sem-resultado {
+  margin-top: 24px;
+  padding: 14px 16px;
+  color: var(--texto-suave);
+  background: #f1f5f9;
+  border-radius: 8px;
+}
+
+.pg-conteudo .tabela-wrap {
+  overflow-x: auto;
+  background: #ffffff;
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+}
+
+.pg-conteudo .tabela {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.pg-conteudo .tabela th {
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--azul-profundo);
+  background: var(--azul-claro);
+}
+
+.pg-conteudo .tabela td {
+  padding: 10px 14px;
+  border-top: 1px solid var(--borda);
+}
+
+.pg-conteudo .tabela tbody tr:hover td {
+  background: #f8fbfd;
+}
+
+/* Mensagens de resultado */
+.pg-conteudo .alerta-ok,
+.pg-conteudo .alerta-erro {
+  margin: 0;
+  padding: 12px 14px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.pg-conteudo .alerta-ok {
+  color: var(--sucesso);
+  background: #eaf7ef;
+  border: 1px solid #bfe3cc;
+}
+
+.pg-conteudo .alerta-erro {
+  color: var(--erro);
+  background: #fdf3f2;
+  border: 1px solid #f0cfcb;
+}
+
+.pg-conteudo .btn-voltar {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 9px 18px;
+  font-weight: 600;
+  color: var(--azul-escuro);
+  text-decoration: none;
+  border: 1px solid var(--azul);
+  border-radius: 8px;
+  transition: background 0.15s;
+}
+
+.pg-conteudo .btn-voltar:hover {
+  background: var(--azul-claro);
+}
+
+@media (max-width: 760px) {
+  .pg-conteudo {
+    padding: 20px 16px;
+  }
+}
