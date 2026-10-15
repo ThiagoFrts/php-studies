@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240">
+  <rect width="240" height="240" fill="#e3f1ef"/>
+  <defs>
+    <g id="pata" fill="#2a9d8f" fill-opacity="0.16">
+      <ellipse cx="0" cy="12" rx="17" ry="14"/>
+      <ellipse cx="-22" cy="-10" rx="7" ry="9" transform="rotate(-20 -22 -10)"/>
+      <ellipse cx="-8" cy="-22" rx="7" ry="10" transform="rotate(-6 -8 -22)"/>
+      <ellipse cx="8" cy="-22" rx="7" ry="10" transform="rotate(6 8 -22)"/>
+      <ellipse cx="22" cy="-10" rx="7" ry="9" transform="rotate(20 22 -10)"/>
+    </g>
+  </defs>
+  <use href="#pata" transform="translate(60 60) rotate(-20)"/>
+  <use href="#pata" transform="translate(180 170) rotate(25)"/>
+</svg>

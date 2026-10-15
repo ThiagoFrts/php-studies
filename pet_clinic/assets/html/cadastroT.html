@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Tutor</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="login">
+    <header>
+        <h1>Preencha o formulário abaixo com os dados do cliente</h1>
+    </header>
+
+    <main>
+        <section>
+            <div class="form">
+                <form action="../php/cadTutor.php" method="post">
+                    <h2>Novo Tutor</h2>
+
+                    <label for="">Nome:</label><br>
+                    <input type="text" required placeholder="João Andrade" maxlength="50" max="50" name="nome">
+                    <br><br>
+
+                    <label for="">Telefone: </label><br>
+                    <input type="tel" placeholder="(31) 97465-3652" name="telefone" required max="15" maxlength="15">
+                    <br><br>
+
+                    <label for="">CPF: </label><br>
+                    <input type="text" placeholder="123.456.789-00" name="cpf" required max="14" maxlength="14">
+
+                    <br>
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+            <a href="inicio.html"><button>Voltar para a aba incial</button></a>
+        </section>
+    </main>
+
+
+
+</body>
+
+</html>

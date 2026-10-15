@@ -1,0 +1,225 @@
+@view-transition {
+  navigation: auto;
+}
+
+:root {
+  --cor-principal: #2a9d8f;
+  --cor-principal-escura: #21867a;
+  --cor-fundo: #f1f7f6;
+  --cor-card: #ffffff;
+  --cor-texto: #264653;
+  --cor-borda: #cfe3e0;
+  --raio: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.5;
+  text-align: center;
+}
+
+header {
+  background: var(--cor-principal);
+  color: #fff;
+  padding: 28px 16px;
+  margin-bottom: 32px;
+}
+
+header h1 {
+  margin: 0 0 6px;
+  font-size: 1.8rem;
+}
+
+header h2,
+header h3 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+main,
+section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 16px 32px;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+nav a {
+  display: block;
+  padding: 24px 16px;
+  background: var(--cor-card);
+  color: var(--cor-principal-escura);
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.15s,
+    background 0.15s,
+    color 0.15s;
+}
+
+nav a:hover {
+  transform: translateY(-3px);
+  background: var(--cor-principal);
+  color: #fff;
+}
+
+.form {
+  max-width: 420px;
+  margin: 0 auto 16px;
+  padding: 28px;
+  background: var(--cor-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.form h2,
+.form h3 {
+  margin-top: 0;
+  text-align: center;
+  color: var(--cor-principal-escura);
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+input,
+select {
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 1px solid var(--cor-borda);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--cor-texto);
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--cor-principal);
+  box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.2);
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 600;
+  color: #fff;
+  background: var(--cor-principal);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+button:hover {
+  background: var(--cor-principal-escura);
+}
+
+.form button[type="submit"] {
+  width: 100%;
+  margin-top: 8px;
+}
+
+a button {
+  background: #6c7a89;
+  margin-top: 8px;
+}
+
+a button:hover {
+  background: #55616e;
+}
+
+table {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 24px;
+  border-collapse: collapse;
+  background: var(--cor-card);
+  border-radius: var(--raio);
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+th {
+  background: var(--cor-principal);
+  color: #fff;
+  padding: 12px;
+  text-align: left;
+}
+
+td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--cor-borda);
+  text-align: left;
+}
+
+tr:nth-child(even) td {
+  background: #f7fbfa;
+}
+
+tr:hover td {
+  background: #e6f3f1;
+}
+
+body > h2,
+body > h3 {
+  margin: 32px 16px 12px;
+}
+
+body > h3 {
+  font-weight: 400;
+}
+
+body > a {
+  display: inline-block;
+}
+
+body.login {
+  min-height: 100vh;
+  background: url("../img/fundo.svg") repeat;
+}
+
+body.login header {
+  background: rgba(42, 157, 143, 0.92);
+}
+
+body.login .form {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+}
