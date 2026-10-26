@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cliente</title>
+</head>
+
+<body>
+    <header>
+        <h1>Realize o cadastro do cliente preenchendo os campos abaixo.</h1>
+    </header>
+    <main>
+        <section>
+            <div class="form">
+                <form action="cadastrar.php" method="post">
+                    <h2>Novo Cliente</h2>
+
+                    <label for="">Nome:</label><br>
+                    <input type="text" required maxlength="50" max="50" name="nome">
+                    <br><br>
+
+                    <label for="">Telefone: </label><br>
+                    <input type="tel" name="telefone" required max="15" maxlength="15">
+                    <br><br>
+
+                    <label for="">CPF: </label><br>
+                    <input type="text" name="cpf" required max="14" maxlength="14">
+
+                    <br>
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+            <a href="../auth/inicio.php"><button>Voltar para a aba incial</button></a>
+        </section>
+    </main>
+
+</body>
+
+</html>
